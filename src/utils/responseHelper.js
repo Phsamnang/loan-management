@@ -188,7 +188,7 @@ class ApiResponse {
   }
 }
 
-module.exports = ApiResponse;
+export { ApiResponse };
 
 // ============================================
 // USAGE EXAMPLES
