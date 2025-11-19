@@ -1,6 +1,5 @@
 const jwt = require("jsonwebtoken");
 const ApiResponse = require("../utils/responseHelper");
-const { pool } = require("../config/database");
 const { User } = require("../models");
 
 /**
