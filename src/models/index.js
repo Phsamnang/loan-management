@@ -1,12 +1,17 @@
 import { sequelize } from "../config/database.js";
 import { DataTypes } from "sequelize";
 import UserModel from "./user.js";
-import Customers from "./Customers.js";
-import Loans from "./Laons.js";
-import PaymentSchedule from "./PaymentSchedule.js";
-import Payment from "./Payment.js";
+import CustomerModel from "./Customers.js";
+import LoanModel from "./Laons.js";
+import PaymentScheduleModel from "./PaymentSchedule.js";
+import PaymentModel from "./Payment.js";
 
 const User = UserModel(sequelize, DataTypes);
+const Customers = CustomerModel(sequelize, DataTypes);
+const Loans = LoanModel(sequelize, DataTypes);
+const PaymentSchedule = PaymentScheduleModel(sequelize, DataTypes);
+const Payment = PaymentModel(sequelize, DataTypes);
+
 Customers.hasMany(Loans, {
   foreignKey: "customer_id",
   as: "loans",
